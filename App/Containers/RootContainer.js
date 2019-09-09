@@ -5,8 +5,11 @@ import { connect } from 'react-redux'
 import StartupActions from '../Redux/StartupRedux'
 import ReduxPersist from '../Config/ReduxPersist'
 
+import { StyleProvider } from 'native-base'
 // Styles
 import styles from './Styles/RootContainerStyles'
+import getTheme from '../Themes/components'
+import theme from '../Themes/variables/platform'
 
 class RootContainer extends Component {
   componentDidMount () {
@@ -18,10 +21,12 @@ class RootContainer extends Component {
 
   render () {
     return (
-      <View style={styles.applicationView}>
-        <StatusBar barStyle='light-content' />
-        <ReduxNavigation />
-      </View>
+      <StyleProvider style={getTheme(theme)}>
+        <View style={styles.applicationView}>
+          <StatusBar barStyle='light-content' />
+          <ReduxNavigation />
+        </View>
+      </StyleProvider>
     )
   }
 }
