@@ -10,7 +10,7 @@ import { StyleProvider } from 'native-base'
 import styles from './Styles/RootContainerStyles'
 import getTheme from '../Themes/components'
 import theme from '../Themes/variables/platform'
-
+import Footer from '../Components/Footer'
 class RootContainer extends Component {
   componentDidMount () {
     // if redux persist is not active fire startup action
@@ -25,6 +25,7 @@ class RootContainer extends Component {
         <View style={styles.applicationView}>
           <StatusBar barStyle='light-content' />
           <ReduxNavigation />
+          <Footer />
         </View>
       </StyleProvider>
     )

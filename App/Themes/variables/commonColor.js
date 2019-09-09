@@ -1,25 +1,25 @@
 // @flow
 
-import color from 'color';
-import { Platform, Dimensions, PixelRatio } from 'react-native';
+import color from 'color'
+import { Platform, Dimensions, PixelRatio } from 'react-native'
 
 export const PLATFORM = {
   ANDROID: 'android',
   IOS: 'ios',
   MATERIAL: 'material',
   WEB: 'web'
-};
+}
 
-const deviceHeight = Dimensions.get('window').height;
-const deviceWidth = Dimensions.get('window').width;
-const platform = Platform.OS;
-const platformStyle = undefined;
+const deviceHeight = Dimensions.get('window').height
+const deviceWidth = Dimensions.get('window').width
+const platform = Platform.OS
+const platformStyle = undefined
 const isIphoneX =
   platform === PLATFORM.IOS &&
   (deviceHeight === 812 ||
     deviceWidth === 812 ||
     deviceHeight === 896 ||
-    deviceWidth === 896);
+    deviceWidth === 896)
 
 export default {
   platformStyle,
@@ -60,55 +60,55 @@ export default {
   buttonFontFamily: platform === PLATFORM.IOS ? 'System' : 'Roboto_medium',
   buttonDisabledBg: '#b5b5b5',
   buttonPadding: 6,
-  get buttonPrimaryBg() {
-    return this.brandPrimary;
+  get buttonPrimaryBg () {
+    return this.brandPrimary
   },
-  get buttonPrimaryColor() {
-    return this.inverseTextColor;
+  get buttonPrimaryColor () {
+    return this.inverseTextColor
   },
-  get buttonInfoBg() {
-    return this.brandInfo;
+  get buttonInfoBg () {
+    return this.brandInfo
   },
-  get buttonInfoColor() {
-    return this.inverseTextColor;
+  get buttonInfoColor () {
+    return this.inverseTextColor
   },
-  get buttonSuccessBg() {
-    return this.brandSuccess;
+  get buttonSuccessBg () {
+    return this.brandSuccess
   },
-  get buttonSuccessColor() {
-    return this.inverseTextColor;
+  get buttonSuccessColor () {
+    return this.inverseTextColor
   },
-  get buttonDangerBg() {
-    return this.brandDanger;
+  get buttonDangerBg () {
+    return this.brandDanger
   },
-  get buttonDangerColor() {
-    return this.inverseTextColor;
+  get buttonDangerColor () {
+    return this.inverseTextColor
   },
-  get buttonWarningBg() {
-    return this.brandWarning;
+  get buttonWarningBg () {
+    return this.brandWarning
   },
-  get buttonWarningColor() {
-    return this.inverseTextColor;
+  get buttonWarningColor () {
+    return this.inverseTextColor
   },
-  get buttonTextSize() {
+  get buttonTextSize () {
     return platform === PLATFORM.IOS
       ? this.fontSizeBase * 1.1
-      : this.fontSizeBase - 1;
+      : this.fontSizeBase - 1
   },
-  get buttonTextSizeLarge() {
-    return this.fontSizeBase * 1.5;
+  get buttonTextSizeLarge () {
+    return this.fontSizeBase * 1.5
   },
-  get buttonTextSizeSmall() {
-    return this.fontSizeBase * 0.8;
+  get buttonTextSizeSmall () {
+    return this.fontSizeBase * 0.8
   },
-  get borderRadiusLarge() {
-    return this.fontSizeBase * 3.8;
+  get borderRadiusLarge () {
+    return this.fontSizeBase * 3.8
   },
-  get iconSizeLarge() {
-    return this.iconFontSize * 1.5;
+  get iconSizeLarge () {
+    return this.iconFontSize * 1.5
   },
-  get iconSizeSmall() {
-    return this.iconFontSize * 0.6;
+  get iconSizeSmall () {
+    return this.iconFontSize * 0.6
   },
 
   // Card
@@ -152,14 +152,14 @@ export default {
   DefaultFontSize: 16,
   fontFamily: platform === PLATFORM.IOS ? 'System' : 'Roboto',
   fontSizeBase: 15,
-  get fontSizeH1() {
-    return this.fontSizeBase * 1.8;
+  get fontSizeH1 () {
+    return this.fontSizeBase * 1.8
   },
-  get fontSizeH2() {
-    return this.fontSizeBase * 1.6;
+  get fontSizeH2 () {
+    return this.fontSizeBase * 1.6
   },
-  get fontSizeH3() {
-    return this.fontSizeBase * 1.4;
+  get fontSizeH3 () {
+    return this.fontSizeBase * 1.4
   },
 
   // Footer
@@ -186,15 +186,15 @@ export default {
   toolbarBtnTextColor: platform === PLATFORM.IOS ? '#007aff' : '#fff',
   iosStatusbar: 'dark-content',
   toolbarDefaultBorder: platform === PLATFORM.IOS ? '#a7a6ab' : '#3F51B5',
-  get statusBarColor() {
+  get statusBarColor () {
     return color(this.toolbarDefaultBg)
       .darken(0.2)
-      .hex();
+      .hex()
   },
-  get darkenHeader() {
+  get darkenHeader () {
     return color(this.tabBgColor)
       .darken(0.03)
-      .hex();
+      .hex()
   },
 
   // Icon
@@ -208,11 +208,11 @@ export default {
   inputSuccessBorderColor: '#2b8339',
   inputErrorBorderColor: '#ed2f2f',
   inputHeightBase: 50,
-  get inputColor() {
-    return this.textColor;
+  get inputColor () {
+    return this.textColor
   },
-  get inputColorPlaceholder() {
-    return '#575757';
+  get inputColorPlaceholder () {
+    return '#575757'
   },
 
   // Line Height
@@ -240,8 +240,8 @@ export default {
   radioBtnSize: platform === PLATFORM.IOS ? 25 : 23,
   radioSelectedColorAndroid: '#3F51B5',
   radioBtnLineHeight: platform === PLATFORM.IOS ? 29 : 24,
-  get radioColor() {
-    return this.brandPrimary;
+  get radioColor () {
+    return this.brandPrimary
   },
 
   // Segment
@@ -271,8 +271,8 @@ export default {
   textColor: '#000',
   inverseTextColor: '#fff',
   noteFontSize: 14,
-  get defaultTextColor() {
-    return this.textColor;
+  get defaultTextColor () {
+    return this.textColor
   },
 
   // Title
@@ -308,4 +308,4 @@ export default {
       bottomInset: 21
     }
   }
-};
+}
